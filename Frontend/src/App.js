@@ -19,6 +19,7 @@ const App = () => {
       const data = await response.json();
       setWeatherData(data?.data);
       setError(""); 
+      setCity('')
     } catch (err) {
       setWeatherData(null);
       setError(err.message || "Unable to fetch weather data. Please try again.");
